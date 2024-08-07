@@ -1,0 +1,88 @@
+\documentclass[twoside, 12pt, openright]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{interval}
+\usepackage[style=ieee, hyperref=true]{biblatex}
+\usepackage{float}
+\usepackage{svg}
+\usepackage{xltabular}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{algorithm, algpseudocodex}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{fancyhdr}
+\addbibresource{bib.bib}
+\Crefname{quote}{quote}{quotes}
+\crefname{algocf}{alg.}{algs.}
+\Crefname{algocf}{Algorithm}{Algorithms}
+\pagestyle{fancy}
+\raggedbottom
+\renewcommand\sectionmark[1]{}
+
+% reverse margins on book
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
+\begin{document}
+\renewcommand{\headrulewidth}{0.0pt}
+\frontmatter
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+    \center
+    \includegraphics[width=0.7\textwidth]{assets/logo.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+    \textsc{\LARGE Hochschule des Biers}\\[0.7cm]
+    \textsc{\Large Fakultät Brauerei}\\[0.7cm]
+    \textsc{\Large Thesis: B.Beer Bierbrauer}\\[0.7cm]
+    \HRule \\[0.4cm]
+    {\bfseries \LARGE Bierprobe}\\[0.4cm] % Title of your document
+    \HRule \\[1.5cm]
+    \large
+    \begin{tabular}{l r}
+    \emph{Author}: & Max \textsc{Mustermann} \\ % Your name
+
+    \emph{Student number}: & 1234567 \\ % Your name
+
+    \emph{E-Mail Address}: & MaxMustermann@protonmail.com \\ % Your name
+
+    \emph{Supervisor}: & Prof. Dr. Peter \textsc{Griffin} \\ % Supervisor's Name
+
+    \emph{First examiner}: & Prof. Dr. Jeremy \textsc{Os} \\ % Supervisor's Name
+
+    \emph{Second examiner}: & Prof. Dr. Miss \textsc{Morgan} \\ % Supervisor's Name
+\end{tabular}
+    \vspace{2cm}
+    {\large \today}\\[2cm]
+    \vfill
+    \end{titlepage}
+
+\chapter*{Statement of authorship}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{assets/authorship.png}
+    \caption{Statement of authorship}
+    \label{fig:statement}
+\end{figure}
+\newpage
+\chapter*{Abstract}
+\newpage
+\tableofcontents
+\renewcommand{\headrulewidth}{0.5pt}
+\newpage
+\mainmatter
+\chapter{Introduction}
+\newpage
+\printbibliography
+\newpage
+\listoffigures
+\newpage
+\chapter{Appendix}
+\newpage
+\end{document}
